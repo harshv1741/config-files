@@ -1,37 +1,34 @@
-local ks = vim.keymap
+local keymap = vim.keymap
+
+keymap.set('n', 'x', '"_x')
 
 -- Increment/decrement
-ks.set('n', '+', '<C-a>')
-ks.set('n', '-', '<C-x>')
+keymap.set('n', '+', '<C-a>')
+keymap.set('n', '-', '<C-x>')
 
 -- Delete a word backwards
-ks.set('n', 'dw', 'vb"_d')
+keymap.set('n', 'dw', 'vb"_d')
 
 -- Select all
-ks.set('n', '<C-a>', 'gg<S-v>G')
+keymap.set('n', '<C-a>', 'gg<S-v>G')
 
--- tab editing
-ks.set('n', 'te', ':tabedit')
-ks.set('n','tn',':tabn')
-ks.set('n', 'ts', ':tabs')
+-- Save with root permission (not working for now)
+--vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
+-- New tab
+keymap.set('n', 'te', ':tabedit')
 -- Split window
-ks.set('n', 'ss', ':split<Enter><C-w>w')
-ks.set('n', 'sv', ':vsplit<Enter><C-w>w')
-
+keymap.set('n', 'ss', ':split<Return><C-w>w')
+keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
 -- Move window
-ks.set('n', '<Space>', '<C-w>w')
-ks.set('', 'sh', '<C-w>h')
-ks.set('', 'sk', '<C-w>k')
-ks.set('', 'sj', '<C-w>j')
-ks.set('', 'sl', '<C-w>l')
+keymap.set('n', '<Space>', '<C-w>w')
+keymap.set('', 'sh', '<C-w>h')
+keymap.set('', 'sk', '<C-w>k')
+keymap.set('', 'sj', '<C-w>j')
+keymap.set('', 'sl', '<C-w>l')
 
 -- Resize window
-ks.set('n', '<C-w><left>', '<C-w><')
-ks.set('n', '<C-w><right>', '<C-w>>')
-ks.set('n', '<C-w><up>', '<C-w>+')
-ks.set('n', '<C-w><down>', '<C-w>-')
-
--- Copy Line Down
-ks.set('n', '<S-A><down>' , '<S-v>ddp')
-
+keymap.set('n', '<C-w><left>', '<C-w><')
+keymap.set('n', '<C-w><right>', '<C-w>>')
+keymap.set('n', '<C-w><up>', '<C-w>+')
+keymap.set('n', '<C-w><down>', '<C-w>-')
