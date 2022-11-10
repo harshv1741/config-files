@@ -1,3 +1,4 @@
-# config-files
-
-This Repository contains my custom configuration files
+# Config files
+## Updates Done
+- Powershell config is completed.
+- In nvim theme stying, keymapping, custom theme, custom status line are executed.
