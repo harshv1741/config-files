@@ -3,6 +3,8 @@ require('maps')
 require('base')
 require('plugins')
 
+--[[
+
 local has = function(x)
 	return vim.fn.has(x) == 1
 end
@@ -17,3 +19,5 @@ end
 if is_win then
 	require('windows')
 end
+
+]] --
