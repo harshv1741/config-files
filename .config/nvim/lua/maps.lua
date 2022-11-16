@@ -13,7 +13,7 @@ keymap.set('n', 'dw', 'vb"_d')
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- Save with root permission (not working for now)
---vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
+-- vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
 -- New tab
 keymap.set('n', 'te', ':tabedit')
@@ -29,10 +29,13 @@ keymap.set('', 'sk', '<C-w>k')
 keymap.set('', 'sj', '<C-w>j')
 keymap.set('', 'sl', '<C-w>l')
 
--- Copy/Cut/Paste or Delete/Yank/Paste to Clipboard
+-- Copy/Cut or Delete/Yank to Clipboard
+keymap.set('', '<C-x>', '"+d')
 keymap.set('', '<C-x>', '"+d')
 keymap.set('', '<C-c>', '"+y')
-keymap.set('', '<C-p>', '"+p')
+
+-- Copy and Paste line
+keymap.set('', ';d', '<S-v>"+y"+p')
 
 -- Resize window
 keymap.set('n', '<C-w><left>', '<C-w><')
