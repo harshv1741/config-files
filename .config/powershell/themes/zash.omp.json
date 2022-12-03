@@ -13,7 +13,7 @@
         {
           "foreground": "#62ED8B",
           "style": "plain",
-          "template": "\u279c",
+          "template": "->",
           "type": "text"
         },
         {
