@@ -7,13 +7,13 @@
         {
           "foreground": "#E36464",
           "style": "plain",
-          "template": "@{{ .UserName }} ",
+          "template": "@{{ .UserName }}",
           "type": "session"
         },
         {
           "foreground": "#62ED8B",
           "style": "plain",
-          "template": "$",
+          "template": " in ",
           "type": "text"
         },
         {
@@ -22,7 +22,7 @@
             "style": "folder"
           },
           "style": "plain",
-          "template": " {{ .Path }}",
+          "template": "{{ .Path }}",
           "type": "path"
         },
         {

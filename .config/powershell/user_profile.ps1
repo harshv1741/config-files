@@ -48,7 +48,7 @@ function vimEdit {vim "~/AppData/Local/nvim" }
 function myPro {Set-Location "D:/Projects"}
 
 # neovim config view
-function vimView {Set-Location "~/AppData/Local/nvim" } 
+function vimView {Set-Location "~/AppData/Local/nvim" && ls } 
 
 # sudo mode
 function admin { sudo pwsh } 
