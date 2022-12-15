@@ -32,7 +32,7 @@
           "type": "git",
           "style": "plain",
           "foreground": "#e2b288",
-          "template": "<#56B6C2>,</>\n\tGit repository on branch <#93BB22>{{ .HEAD }}</>",
+          "template": "<#56B6C2>,</>\n   Git repository is on branch <#93BB22>{{ .HEAD }}</>",
           "properties": {
             "branch_icon": ""
           }
