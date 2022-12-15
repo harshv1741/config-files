@@ -1,49 +1,55 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
+          "type": "session",
+          "style": "plain",
           "foreground": "#E36464",
-          "style": "plain",
-          "template": "@{{ .UserName }}",
-          "type": "session"
+          "template": "User @{{ .UserName }}"
         },
         {
+          "type": "text",
+          "style": "plain",
           "foreground": "#62ED8B",
-          "style": "plain",
-          "template": " in ",
-          "type": "text"
+          "template": " is in "
         },
         {
+          "type": "path",
+          "style": "plain",
           "foreground": "#56B6C2",
+          "template": "{{ .Path }}",
           "properties": {
             "style": "folder"
-          },
-          "style": "plain",
-          "template": "{{ .Path }}",
-          "type": "path"
+          }
         },
         {
-          "foreground": "#D4AAFC",
+          "type": "git",
+          "style": "plain",
+          "foreground": "#e2b288",
+          "template": "<#56B6C2>,</>\n\tGit repository on branch <#93BB22>{{ .HEAD }}</>",
           "properties": {
             "branch_icon": ""
-          },
+          }
+        },
+				{
+          "type": "text",
           "style": "plain",
-          "template": " <#DDB15F>git(</>{{ .HEAD }}<#DDB15F>)</>",
-          "type": "git"
+          "foreground": "#62ED8B",
+          "template": ":$"
         },
         {
-          "foreground": "#DCB977",
+          "type": "exit",
           "style": "plain",
-          "template": " \uf119",
-          "type": "exit"
+          "foreground": "#DCB977",
+          "template": " \uf119"
         }
-      ],
-      "type": "prompt"
+      ]
     }
-  ],
-  "final_space": true,
-  "version": 2
+  ]
 }
