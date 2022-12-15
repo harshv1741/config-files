@@ -38,7 +38,7 @@ Import-Module Terminal-Icons
 
 # ls in Different Style 
 function la {Get-ChildItem | Format-Wide} # Width view
-function ll {Get-ChildItem | Format-List} # List view
+function lla {Get-ChildItem | Format-List} # List view
 
 # neovim config edit
 function vimEdit {vim "~/AppData/Local/nvim" } 
@@ -95,4 +95,4 @@ Set-Alias vim nvim
 Set-Alias eth Get-NetIPAddress
 Set-Alias fdir Get-ChildItem
 Set-Alias grep findstr
-Set-Alias g git
+
